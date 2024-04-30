@@ -75,6 +75,8 @@ todo2 <- merge(x = metadatos_df_2,
                by = "doc_num",
                all = TRUE)
 
+todo2[189, 4] <- 2011   # corregir que en TESIUNAM viene así "[2011]"
+
 # Guardar el data frame en un R data file
 
 saveRDS(todo2, file = "todo.rds")
