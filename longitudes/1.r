@@ -1,12 +1,15 @@
+# primero que nada, esto limpia las tesis de caracteres vacíos como "\\t"
+# "\\n" y "\\r". Los reemplaza con " " y luego reemplaza todos los "  "
+# (dobles espacios) con " " (un espacio). Es un loop que itera 100 veces,
+# que creo que es suficiente.
+# Luego, tengo pensado que reemplaze los caracteres especiales de unicode como
+# "\\u2028"
+
 library(ggplot2)
 
 todo <- readRDS("todo.rds")
 
 # Limpiar los caracteres vacíos ("\\t", "\\r", "\\n" y dobles espacios)
-# faltan los unicode como \\u2028 y el resto. Checar si son vacíos o si no.
-# grep("\\u", prueba6) sirve para ver cuáles tienen esos caracteres.
-# prueba6 es un vector con los textos limpios. Al seguir limpiando será prueba7
-# y así.
 
 prueba <- todo[, 5]
 prueba2 <- gsub("\\n", " ", prueba)
@@ -18,31 +21,18 @@ for (x in 1:100) {
     prueba6 <- gsub("  ", " ", prueba6)
 }
 
-nchar(prueba)
-nchar(prueba2)
-nchar(prueba3)
-nchar(prueba4)
-nchar(prueba5)
-nchar(prueba6)
-
-grep("\\u", prueba6)
-
 todo2 <- todo
-todo2[, 5] <- prueba6
-todo2[301,]
-# l1 <- nchar(todo[, 5])  # cantidad de caracteres en cada trabajo de titulación
-# años <- todo$año
-# 
-# l2_df <- data.frame(
-#     año = años,
-#     texto = l1
-# )
-# 
-# l3_df <- l2_df[order(l2_df$año), ]
-# 
-# plot(l3_df)
-# 
-# todo[2, 5]
-# 
-# l2_df[176, ]
-# 
+todo2[, 5] <- prueba6   # al final tiene que ser con la última pruebaN
+
+
+# A sacar longitudes
+
+l1 <- nchar(todo2[, 5])     # longitudes
+l_y_a <- data.frame(        # longitudes y años
+    año <- todo2[, 4],
+    longitud = l1
+)
+
+l_y_a2 <- l_y_a[order(l_y_a$año), ]
+
+plot(l_y_a2)
