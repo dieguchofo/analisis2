@@ -1,9 +1,6 @@
-# primero que nada, esto limpia las tesis de caracteres vacíos como "\\t"
-# "\\n" y "\\r". Los reemplaza con " " y luego reemplaza todos los "  "
-# (dobles espacios) con " " (un espacio). Es un loop que itera 100 veces,
-# que creo que es suficiente.
-# Luego, tengo pensado que reemplaze los caracteres especiales de unicode como
-# "\\u2028"
+# Limpia los textos de todos los caracteres sobrantes como "\n" o "\\r"
+# Grafica la longitud en caracteres promedio anual de los trabajos.
+# Saca "longitudes_promedio.png"
 
 library(ggplot2)
 library(dplyr)
@@ -35,19 +32,23 @@ l_y_a <- data.frame(        # longitudes y años
     longitud = l1
 )
 
-l_y_a2 <- l_y_a[order(l_y_a$año), ]
-colnames(l_y_a2) <- c("año", "longitud")
+l_y_a2 <- l_y_a[order(l_y_a$año), ]         # ordenar cronológicamente
+colnames(l_y_a2) <- c("año", "longitud")    # corregir los nombres
 
-l_y_a3 <- l_y_a2[complete.cases(l_y_a2), ]
+l_y_a3 <- l_y_a2[complete.cases(l_y_a2), ]  # quitar los NA
 
-promedios <- aggregate(l_y_a3[, 2], list(año = l_y_a3[, 1]), mean)
+promedios <- aggregate(l_y_a3[, 2], list(año = l_y_a3[, 1]), mean)  # promedios
+colnames(promedios) <- c("año", "longitud_promedio")
+promedios2 <- promedios     # para que quede bonita la gráfica
+promedios2[, 1] <- as.integer(promedios[, 1]) - 2000
+promedios2[1:4, 1] <- c("06", "07", "08", "09")
 
 # HACERLA EN LÍNEA
 
-ggplot(data = promedios, aes(x = año, y = x)) +
-    geom_point(size = 0.5)
+ggplot(data = promedios2, aes(x = año, y = longitud_promedio, group = 1)) +
+    geom_line()
     ggsave(
-        filename = "longitudes_promedio.png",
-        width = 8,
-        height = 5
+        filename = "graficas/longitudes/longitudes_promedio.png",
+        width = 5,
+        height = 3
     )
