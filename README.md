@@ -6,6 +6,11 @@ La idea es que cada folder sea para una extracción de datos diferente.
 u2029 es el caracter paragraph separator. Chance me sirve de algo? Aunque la 
 verdad no creo que de mucho
 
+# /topic_modeling
+Aquí estoy haciendo mi desmadre de MALLET, además de preparar los textos con R.
+
+Para usar el folder textos_individuales/ hay que correr 0.r y luego 0.2.py
+
 # HACE FALTA
 Tengo varias opciones cuando se trata de tema:
     - separar las palabras por año y ver qué sale de las palabras más comunes
