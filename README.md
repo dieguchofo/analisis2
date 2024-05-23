@@ -23,15 +23,25 @@ resultados de MALLET.
 # /topic_modeling
 Aquí estoy haciendo mi desmadre de MALLET, además de preparar los textos con R.
 
-Para usar el folder textos_individuales/ hay que correr 0.r y luego 0.2.py
-
 # HACE FALTA
 Tengo varias opciones cuando se trata de tema:
     - separar las palabras por año y ver qué sale de las palabras más comunes
     - separar los trabajos por tipo de trabajo y ver qué sale
     - usar un programa ya hecho de topic modeling.
 
-# /palabras comunes
+## /preparar_textos
+Hay que correr esto para tener los archivos .txt de los textos individuales. 
+0.r hace un .txt limpio (sólo letras, números y espacios) por cada trabajo de
+titulación.
+0.1.r hace un .txt por cada año (esto es obsoleto, pues no produce resultados
+confiables con MALLET ni con ningún otro tipo de análisis de textos que
+dependa de la proximidad entre palabras, dado que las últimas palabras de un
+texto están alado de las primeras del siguiente)
+0.2.py solamente hace que los nombres de los textos en /textos_individuales
+sean 001.txt en vez de 1.txt, etc.
+0.3.r hace 0.r pero su output es "textos_limpios.rds"
+
+## /palabras comunes
 ### es_stop_words.txt
 Esta lista la saqué del blog de Mauricio Matias C., "Palabras Vacías en Español (stop words) ft Python"
 (https://cr0wg4n.medium.com/palabras-vac%C3%ADas-en-espa%C3%B1ol-stop-words-ft-python-3117e52d2bff)
