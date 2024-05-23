@@ -3,8 +3,22 @@ La idea es que cada folder sea para una extracción de datos diferente.
     todo.rds es un data frame con las columnas
     "doc_num" "nombre" "titulo" "año" "texto"
 
-u2029 es el caracter paragraph separator. Chance me sirve de algo? Aunque la 
-verdad no creo que de mucho
+
+ANTES DE SEGUIR HAY QUE HACER ESTOS CARACTERES ESPACIOS:
+\u2029
+\u2028
+
+# /taguear_trabajos
+Este tiene el objetivo de taguear los trabajos como tesis/tesina, traducción,
+propuesta de material didáctico, o informe de servicio social/de experiencia
+profesional.
+Esto lo puedo hacer en MALLET o buscando las frases "tesis", "tesina",
+"traducción comentada", "informe" y "propuesta".
+Yo creo que lo mejor va a ser una combinación de ambas. MALLET, por más bueno
+que sea, no puede decir con certeza qué tipo de trabajo es cada uno. 
+
+Tengo que comparar los resultados que tenga buscando frases concretas con los
+resultados de MALLET.
 
 # /topic_modeling
 Aquí estoy haciendo mi desmadre de MALLET, además de preparar los textos con R.
@@ -17,7 +31,7 @@ Tengo varias opciones cuando se trata de tema:
     - separar los trabajos por tipo de trabajo y ver qué sale
     - usar un programa ya hecho de topic modeling.
 
-# palabras comunes
+# /palabras comunes
 ### es_stop_words.txt
 Esta lista la saqué del blog de Mauricio Matias C., "Palabras Vacías en Español (stop words) ft Python"
 (https://cr0wg4n.medium.com/palabras-vac%C3%ADas-en-espa%C3%B1ol-stop-words-ft-python-3117e52d2bff)
@@ -33,7 +47,7 @@ creo que no rindió muchos frutos. No porque el método sea malo sino porque cre
 que sí voy a necesitar separar los trabajos o por año o por tipo de trabajo o 
 ambos.
 
-# longitudes
+# /longitudes
 ## findings
 No encontré ninguna tendencia importante. Es una línea casi recta. Igual hay
 que ver cómo hacer esas líneas de tendencias pa ver si sube o baja o qué.
@@ -49,3 +63,8 @@ tan equitativa que no van a modificar las tendencias.
 
 El Yannick Eduardo se echó una tesis de 300 páginas. Hay que tomarlo en cuenta
 y chance excluirlo. NO AFECTA NADA SI QUITO SU TESIS.
+
+# findings extras
+Esto no es verdad porque u2029 aparece en como 1 de cada 15 trabajos de titualación:
+    u2029 es el caracter paragraph separator. Chance me sirve de algo? Aunque la
+    verdad no creo que de mucho
