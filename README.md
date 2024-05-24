@@ -20,6 +20,10 @@ que sea, no puede decir con certeza qué tipo de trabajo es cada uno.
 Tengo que comparar los resultados que tenga buscando frases concretas con los
 resultados de MALLET.
 
+## 0.r
+está resultando ser un poco más difícil, pero con talacha voy a lograr taguear
+todos los trabajos. Va a tener que ser entre manual y no.
+
 # /topic_modeling
 Aquí estoy haciendo mi desmadre de MALLET, además de preparar los textos con R.
 
@@ -30,7 +34,7 @@ Tengo varias opciones cuando se trata de tema:
     - usar un programa ya hecho de topic modeling.
 
 ## /preparar_textos
-Hay que correr esto para tener los archivos .txt de los textos individuales. 
+Hay que correr esto para tener los archivos .txt de los textos individuales:
 0.r hace un .txt limpio (sólo letras, números y espacios) por cada trabajo de
 titulación.
 0.1.r hace un .txt por cada año (esto es obsoleto, pues no produce resultados
