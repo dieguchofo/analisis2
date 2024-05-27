@@ -21,8 +21,10 @@ Tengo que comparar los resultados que tenga buscando frases concretas con los
 resultados de MALLET.
 
 ## 0.r
-está resultando ser un poco más difícil, pero con talacha voy a lograr taguear
-todos los trabajos. Va a tener que ser entre manual y no.
+Voy a sacar tres categorías:
+1. tesis y tesinas,
+2. traducciones, y
+3. el resto.
 
 # /topic_modeling
 Aquí estoy haciendo mi desmadre de MALLET, además de preparar los textos con R.

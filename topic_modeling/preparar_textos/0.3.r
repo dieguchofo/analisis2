@@ -21,7 +21,5 @@ prueba7[, 5] <- gsub("[^[:alnum:][:space:]]", "", prueba6[, 5]) # quitar non-wor
 prueba8[, 5] <- gsub('["\']', "", prueba7[, 5])   # quitar las comillas
 prueba9 <- drop_na(prueba8)
 
-textos <- prueba9[, 5]
-
 # guardar en un .rds
-saveRDS(textos, file = "textos_limpios.rds")
+saveRDS(prueba9, file = "textos_limpios.rds")
