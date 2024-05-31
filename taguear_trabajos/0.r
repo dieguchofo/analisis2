@@ -1,7 +1,8 @@
-# Esto va a sacar los primeros 2000? caracteres de cada uno de los textos en
-# /topic_modeling/textos_individuales, quitarles los espacios por completo y
-# ver si tienen ""tesis", "tesina", "traducción comentada", "informe" o
-# "propuesta"."
+# Esto va a sacar las portadas de los textos en textos_limpios.rds, quitarles
+# los espacios por completo y ver si tienen ""tesis", "tesina", "traducción
+# comentada", "informe" o "propuesta".
+
+# voy a dividir los trabajos en tesis y tesinas, traducciones y el resto
 
 # para corroborar manualmente hay que hacer t2[tesinas, 5] (o la variable de la
 # palabra clave que vaya a querer checar). Chance ya comparo eso con lo que diga
@@ -32,10 +33,6 @@ tesisque <- grep("tesisque", t3[, 5], ignore.case = TRUE)
     # traducciones
 traducciones <- grep("traducción", t3[, 5], ignore.case = TRUE)
 traduccionescomentadas <- grep("traduccióncomentada", t3[, 5], ignore.case = TRUE)
-
-intersect(tesisque, propuestas)
-
-
 
 length(tesinasque) + length(traduccionescomentadas) + length(tesisque)
 

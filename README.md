@@ -4,9 +4,15 @@ La idea es que cada folder sea para una extracción de datos diferente.
     "doc_num" "nombre" "titulo" "año" "texto"
 
 
-ANTES DE SEGUIR HAY QUE HACER ESTOS CARACTERES ESPACIOS:
-\u2029
-\u2028
+# COSAS QUE HACER
+- instalar el paquete de MALLET para R.
+- descifrar cómo usarlo
+- taguear los trabajos con el método siguiente: Cada trabajo tiene un score
+para cada tópico. El score mayor que tenga cada trabajo va a ser el que se
+tome como el real. Es decir, si un trabajo tiene .69 de traducción, es un 
+trabajo de traducción; si tiene .40 de poesía, .30 de traducción, .25 de
+didáctica y .5 de novela, es una tesina/tesis.
+
 
 # /taguear_trabajos
 Este tiene el objetivo de taguear los trabajos como tesis/tesina, traducción,
@@ -21,6 +27,14 @@ Tengo que comparar los resultados que tenga buscando frases concretas con los
 resultados de MALLET.
 
 ## 0.r
+Sinceramente esto es muy difícil de automatizar porque no hay una manera
+estándar de hacer las portadas. Muchas veces las traducciones también tienen la
+palabra "tesis" en la portada. Además, hay tesis y tesinas sobre traducción, y
+no es claro cuándo es una traducción y cuándo es una tesis o tesina.
+
+Voy a tener que hacerlo muy sistemáticamente:
+1. 
+
 Voy a sacar tres categorías:
 1. tesis y tesinas,
 2. traducciones, y
@@ -28,6 +42,14 @@ Voy a sacar tres categorías:
 
 # /topic_modeling
 Aquí estoy haciendo mi desmadre de MALLET, además de preparar los textos con R.
+
+## /mallet
+### /4_topics
+#### /r
+Creo que es mejor usar mallet desde R. Hay que ver cómo hacer eso.
+En este folder voy a intentar interpretar los outputs de MALLET cuando hice el
+experimento de sacar cuatro temas. Creo que esto me puede ayudar a categorizar
+los trabajos.
 
 # HACE FALTA
 Tengo varias opciones cuando se trata de tema:
