@@ -16,7 +16,7 @@ for (x in 1:11) {                 # 11 es el número de iteraciones necesario
     prueba6[, 5] <- gsub("  ", " ", prueba6[, 5])
 }
 prueba7[, 5] <- gsub("[^[:alnum:][:space:]]", "", prueba6[, 5]) # quitar non-word characters # nolint
-prueba8[, 5] <- gsub('["\']', "", prueba7[, 5])
+prueba8[, 5] <- gsub('["\']', "", prueba7[, 5]) # quitar comillas
 prueba9 <- drop_na(prueba8)
 
 prueba10 <- prueba9[, 4:5]   # sólo año y texto

@@ -5,14 +5,19 @@ La idea es que cada folder sea para una extracción de datos diferente.
 
 
 # COSAS QUE HACER
-- instalar el paquete de MALLET para R.
-- descifrar cómo usarlo
 - taguear los trabajos con el método siguiente: Cada trabajo tiene un score
 para cada tópico. El score mayor que tenga cada trabajo va a ser el que se
 tome como el real. Es decir, si un trabajo tiene .69 de traducción, es un 
 trabajo de traducción; si tiene .40 de poesía, .30 de traducción, .25 de
 didáctica y .5 de novela, es una tesina/tesis.
 
+# /estilometria
+Aquí pretendo hacer experimentos de estilometría. Para resolver el problema de
+las citas, primero que nada voy a quitar las stopwords en inglés. Respecto a
+las citas en español no sé qué voy a hacer todavía. A lo mejor las ignoro?
+IDEA: puedo hacer un experimento en el que limpie, por ejemplo, 10 trabajos y
+compare las diferencias entre los estilos modelados con los textos sucios y los
+textos limpios
 
 # /taguear_trabajos
 Este tiene el objetivo de taguear los trabajos como tesis/tesina, traducción,
@@ -93,7 +98,8 @@ Si sí voy a usar esta gráfica (alguna de las dos longitudes_absolutas_y_promed
 tengo que hacer bonito el eje x, porque ahorita está todo encimado.
 
 ## descripción
-Primero reemplaza "\\t" ,"\\r" y "\\n" con " " y luego reemplaza 100 veces "  " con " ".
+Primero reemplaza "\\t" ,"\\r" y "\\n" con " " y luego reemplaza 100 veces "  "
+con " ".
 Estoy ignorando los caracteres especiales de unicode (como "\\u2028", etc.)
 porque no sé cómo reemplazarlos con sus caracteres reales (me imagino que no es
 posible y que por eso están así) y creo que son tan pocos y usados de manera
@@ -103,6 +109,5 @@ El Yannick Eduardo se echó una tesis de 300 páginas. Hay que tomarlo en cuenta
 y chance excluirlo. NO AFECTA NADA SI QUITO SU TESIS.
 
 # findings extras
-Esto no es verdad porque u2029 aparece en como 1 de cada 15 trabajos de titualación:
-    u2029 es el caracter paragraph separator. Chance me sirve de algo? Aunque la
-    verdad no creo que de mucho
+u2029, a pesar de ser el caracter "paragraph separator", no me sirve para
+identificar los párrafos porque solamente aparece en como 1 de cada 15 trabajos
