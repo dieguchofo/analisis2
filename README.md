@@ -12,12 +12,8 @@ trabajo de traducción; si tiene .40 de poesía, .30 de traducción, .25 de
 didáctica y .5 de novela, es una tesina/tesis.
 
 # /estilometria
-Aquí pretendo hacer experimentos de estilometría. Para resolver el problema de
-las citas, primero que nada voy a quitar las stopwords en inglés. Respecto a
-las citas en español no sé qué voy a hacer todavía. A lo mejor las ignoro?
-IDEA: puedo hacer un experimento en el que limpie, por ejemplo, 10 trabajos y
-compare las diferencias entre los estilos modelados con los textos sucios y los
-textos limpios
+Estoy usando el paquete de R 'stylo'.
+
 
 # /taguear_trabajos
 Este tiene el objetivo de taguear los trabajos como tesis/tesina, traducción,
@@ -89,6 +85,10 @@ Tal vez es porque no soy lo suficientemente creativo, pero lo que hice aquí
 creo que no rindió muchos frutos. No porque el método sea malo sino porque creo
 que sí voy a necesitar separar los trabajos o por año o por tipo de trabajo o 
 ambos.
+
+# /comillas
+Esto es un intento fallido de separar las citas del texto que escribió la
+persona. Creo que es una causa perdida.
 
 # /longitudes
 ## findings
