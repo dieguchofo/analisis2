@@ -14,6 +14,14 @@ didáctica y .5 de novela, es una tesina/tesis.
 # /estilometria
 Estoy usando el paquete de R 'stylo'.
 
+Cada que corres stylo, genera una gráfica y además un .csv. Creo que eso es lo
+que voy a tener que luego procesar con "gephi".
+
+## /corpus
+Stylo necesita una carpeta llamada "corpus" en el que estén los plaintexts
+
+
+
 
 # /taguear_trabajos
 Este tiene el objetivo de taguear los trabajos como tesis/tesina, traducción,
