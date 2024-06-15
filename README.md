@@ -4,6 +4,17 @@ La idea es que cada folder sea para una extracción de datos diferente.
     "doc_num" "nombre" "titulo" "año" "texto"
 
 
+# /comprobacion_hipotesis
+En este voy a llevar a cabo los experimentos que me van a permitir comprobar la
+hipótesis de que el estilo se ha ido homogeneizando y los temas se han ido
+diversificando. Tengo dos datasets: las frecuencias relativas de cada palabra
+en cada trabajo que saqué con stylo, y los pesos de cada tema en cada trabajo
+que sacó MALLET. Lo que voy a hacer sencillamente es dividir los datos por año,
+sacar la distancia euclideana entre cada renglón de los datasets con 'dist()' y
+ver las distancias promedio de cada año. Si las distancias promedio del dataset
+que sacó stylo disminuyen, mi hipótesis es correcta, y si las distancias
+promedio del dataset de MALLET aumentan, mi hipótesis es correcta.  
+
 # COSAS QUE HACER
 - taguear los trabajos con el método siguiente: Cada trabajo tiene un score
 para cada tópico. El score mayor que tenga cada trabajo va a ser el que se
