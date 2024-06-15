@@ -13,7 +13,14 @@ que sacó MALLET. Lo que voy a hacer sencillamente es dividir los datos por año
 sacar la distancia euclideana entre cada renglón de los datasets con 'dist()' y
 ver las distancias promedio de cada año. Si las distancias promedio del dataset
 que sacó stylo disminuyen, mi hipótesis es correcta, y si las distancias
-promedio del dataset de MALLET aumentan, mi hipótesis es correcta.  
+promedio del dataset de MALLET aumentan, mi hipótesis es correcta.
+
+## /estilo
+### 1.r
+tengo 'freq' que es un data frame con las frecuencias relativas de las 5000
+palabras más comunes en los 492 trabajos de titulación.
+Hace falta dividir los datos por año y promediar sus distancias euclideanas.
+Tal vez graficar?
 
 # COSAS QUE HACER
 - taguear los trabajos con el método siguiente: Cada trabajo tiene un score
