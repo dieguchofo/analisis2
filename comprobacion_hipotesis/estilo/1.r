@@ -1,3 +1,4 @@
+
 # En este archivo voy a intentar importar "table_with_frequencies.txt" para
 # tener un data frame limpio.
 
