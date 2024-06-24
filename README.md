@@ -17,10 +17,16 @@ promedio del dataset de MALLET aumentan, mi hipótesis es correcta.
 
 ## /estilo
 ### 1.r
-tengo 'freq' que es un data frame con las frecuencias relativas de las 5000
-palabras más comunes en los 492 trabajos de titulación.
-Hace falta dividir los datos por año y promediar sus distancias euclideanas.
-Tal vez graficar?
+grafica las distancias promedio por año entre los trabajos, tomando sus las
+frecuencias relativas de las 5000 palabras más frecuentes como sus posiciones
+en un espacio de 5000 dimensiones. Su input es "table_with_frequencies.txt",
+que produjo stylo, y su output "estilo.png".
+
+## /tema
+### 1.r
+Lo mismo que estilo/1.r, pero con los scores de 50 temas sacados por MALLET. Su
+input es "50-doc-topics.csv" y su output "tema.png".
+
 
 # COSAS QUE HACER
 - taguear los trabajos con el método siguiente: Cada trabajo tiene un score
@@ -42,16 +48,11 @@ Stylo necesita una carpeta llamada "corpus" en el que estén los plaintexts
 
 
 # /taguear_trabajos
-Este tiene el objetivo de taguear los trabajos como tesis/tesina, traducción,
-propuesta de material didáctico, o informe de servicio social/de experiencia
-profesional.
-Esto lo puedo hacer en MALLET o buscando las frases "tesis", "tesina",
-"traducción comentada", "informe" y "propuesta".
-Yo creo que lo mejor va a ser una combinación de ambas. MALLET, por más bueno
-que sea, no puede decir con certeza qué tipo de trabajo es cada uno. 
+## 0.r
+Es inservible. Este método no fue el correcto.
 
-Tengo que comparar los resultados que tenga buscando frases concretas con los
-resultados de MALLET.
+## 1.r
+
 
 ## 0.r
 Sinceramente esto es muy difícil de automatizar porque no hay una manera

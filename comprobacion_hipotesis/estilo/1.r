@@ -1,4 +1,3 @@
-
 # En este archivo voy a intentar importar "table_with_frequencies.txt" para
 # tener un data frame limpio.
 
@@ -128,4 +127,7 @@ m23 <- mean(d23)
 # graficar
 juntos <- c(m06, m07, m08, m09, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23)
 
-plot(juntos, type = "l")
+png("comprobacion_hipotesis/estilo/estilo.png")
+plot(juntos, type = "l", xaxt = "n", main = "estilo", xlab = "", ylab = "")
+axis(1, at = 1:18, labels = 2006:2023)
+dev.off()

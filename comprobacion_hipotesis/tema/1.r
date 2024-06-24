@@ -91,4 +91,7 @@ m23 <- mean(d23)
 # graficar
 juntos <- c(m06, m07, m08, m09, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23)
 
-plot(juntos, type = "l")
+png("comprobacion_hipotesis/tema/tema.png")
+plot(juntos, type = "l", xaxt = "n", main = "tema", xlab = "", ylab = "")
+axis(1, at = 1:18, labels = 2006:2023)
+dev.off()
