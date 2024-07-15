@@ -52,7 +52,18 @@ Stylo necesita una carpeta llamada "corpus" en el que estén los plaintexts
 Es inservible. Este método no fue el correcto.
 
 ## 1.r
+El método que usé para esto es casi perfecto. Una falla, por ejemplo, es la
+traducción comentada con el id 0641393, que tiene de score de tesis/tesina
+0.6866955170883267 y de otro 0.31330448291167334.
 
+## 1.1.r
+Esto es 1.r pero manualmente tagueo los que considero que no se pueden taguear
+automáticamente. 
+
+Checando los resultados de mallet contra los míos respecto a los indecisos,
+estamos de acuerdo en 51 trabajos de 92. O sea, en ese rango, es malísimo.
+Tengo que corroborar los que según yo son decisos, porque qué tal que así es
+en cualquier rango (no creo)
 
 ## 0.r
 Sinceramente esto es muy difícil de automatizar porque no hay una manera
