@@ -1,0 +1,4 @@
+0	0.17677	traducción texto español original cuento palabra palabras de\u traducir fox la\u translation goldberg gould obra stanley traductor mccann meg inglés 
+1	0.90095	novela personajes forma personaje historia vida mundo relación identidad capítulo obra narrador texto género narrativa mujeres lector realidad mujer sociedad 
+2	0.3309	inglés lengua alumnos lectura texto aprendizaje alumno clase información forma proceso enseñanza comprensión actividades estudiantes estrategias nivel palabras textos profesor 
+3	0.32059	poema obra poética poesía forma texto voz poeta poemas versos palabras amor dios mundo verso imagen autor vida hombre relación 

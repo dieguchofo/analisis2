@@ -1,0 +1,4 @@
+0	0.30656	inglés lengua texto alumnos lectura the aprendizaje traducción alumno forma clase textos información proceso and enseñanza palabras estudiantes comprensión actividades 
+1	0.61754	the and that was you with for her his she but not traducción had they this have from are one 
+2	0.62191	the and novela personajes personaje forma historia that relación identidad género capítulo mundo narrador texto vida narrativa obra narración realidad 
+3	0.31645	the and poema that obra forma poética poesía his voz texto poeta poemas for with versos mundo dios imagen amor 
