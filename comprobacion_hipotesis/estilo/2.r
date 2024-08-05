@@ -108,3 +108,9 @@ png("comprobacion_hipotesis/estilo/estilo_smooth.png")
 scatter.smooth(juntos, type = "l", col = "#ADADAD", xaxt = "n", main = "estilo", xlab = "", ylab = "")
 axis(1, at = 1:18, labels = 2006:2023)
 dev.off()
+
+# smooth con y axis real
+png("comprobacion_hipotesis/estilo/estilo_smooth_real_axis.png")
+scatter.smooth(juntos, type = "l", col = "#ADADAD", xaxt = "n", main = "estilo", xlab = "", ylab = "", ylim = c(0, 4))
+axis(1, at = 1:18, labels = 2006:2023)
+dev.off()

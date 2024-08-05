@@ -65,3 +65,43 @@ for(i in 1:nrow(datos5)) {
 # y 0 es para otro
 
 datos <- cbind(datos5, columna_vacia)
+colnames(datos)[8] <- "manual"
+
+# lo voy a hacer de 10 en 10 para no perderme
+
+datos[grep("i", datos$indecisos), c(3, 8)][1:10, ]                              # ver
+datos[grep("i", datos$indecisos), 8][1:10] <- c(1, 1, 0, 0, 0, 1, 0, 0, 0, 0)   # escribir
+
+datos[grep("i", datos$indecisos), c(3, 8)][11:20, ]
+datos[grep("i", datos$indecisos), 8][11:20] <- c(1, 0, 0, 1, 0, 1, 0, 1, 0, 1)
+
+datos[grep("i", datos$indecisos), c(3, 8)][21:30, ]
+datos[grep("i", datos$indecisos), 8][21:30] <- c(1, 0, 1, 0, 1, 0, 1, 1, 1, 0)
+
+datos[grep("i", datos$indecisos), c(3, 8)][31:40, ]
+datos[grep("i", datos$indecisos), 8][31:40] <- c(1, 0, 1, 0, 1, 1, 1, 1, 0, 0)
+
+datos[grep("i", datos$indecisos), c(3, 8)][41:50, ]
+datos[grep("i", datos$indecisos), 8][41:50] <- c(0, 0, 0, 0, 0, 0, 1, 1, 0, 0)
+
+datos[grep("i", datos$indecisos), c(3, 8)][51:60, ]
+datos[grep("i", datos$indecisos), 8][51:60] <- c(0, 0, 1, 0, 1, 0, 1, 1, 0, 0)
+
+datos[grep("i", datos$indecisos), c(3, 8)][61:70, ]
+datos[grep("i", datos$indecisos), 8][61:70] <- c(0, 1, 0, 1, 1, 0, 1, 1, 1, 0)
+
+datos[grep("i", datos$indecisos), c(3, 8)][71:80, ]
+datos[grep("i", datos$indecisos), 8][71:80] <- c(1, 0, 0, 0, 0, 1, 0, 0, 0, 0)
+
+datos[grep("i", datos$indecisos), c(3, 8)][81:90, ]
+datos[grep("i", datos$indecisos), 8][81:90] <- c(0, 0, 0, 1, 0, 1, 1, 0, 1, 1)
+
+datos[grep("i", datos$indecisos), c(3, 8)][91:92, ]
+datos[grep("i", datos$indecisos), 8][91:92] <- c(1, 0)
+
+# corroborar
+datos[grep("i", datos$indecisos), c(3, 8)]
+
+# ver qué tan acertado es mallet
+datos[grep("i", datos$indecisos), c(6,8)]
+colnames(datos)
