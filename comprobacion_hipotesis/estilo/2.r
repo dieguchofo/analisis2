@@ -103,8 +103,27 @@ plot(juntos, type = "l", xaxt = "n", main = "estilo", xlab = "", ylab = "")
 axis(1, at = 1:18, labels = 2006:2023)
 dev.off()
 
+<<<<<<< HEAD
+=======
+# eje y real
+png("comprobacion_hipotesis/estilo/estilo_y_real.png")
+plot(juntos, type = "l", xaxt = "n", main = "estilo", xlab = "", ylab = "", ylim = c(0, 4))
+axis(1, at = 1:18, labels = 2006:2023)
+dev.off()
+
+>>>>>>> 06f861c70fadbc7b69ba894abe3bdbc72349df62
 # smooth
 png("comprobacion_hipotesis/estilo/estilo_smooth.png")
 scatter.smooth(juntos, type = "l", col = "#ADADAD", xaxt = "n", main = "estilo", xlab = "", ylab = "")
 axis(1, at = 1:18, labels = 2006:2023)
+<<<<<<< HEAD
 dev.off()
+=======
+dev.off()
+
+# smooth con y axis real
+png("comprobacion_hipotesis/estilo/estilo_smooth_real_axis.png")
+scatter.smooth(juntos, type = "l", col = "#ADADAD", xaxt = "n", main = "estilo", xlab = "", ylab = "", ylim = c(0, 4))
+axis(1, at = 1:18, labels = 2006:2023)
+dev.off()
+>>>>>>> 06f861c70fadbc7b69ba894abe3bdbc72349df62

@@ -1,3 +1,6 @@
-*.txt
-*.png
 *.mallet
+estilometria/corpus/
+estilometria/corpus1/
+topic_modeling/textos_anuales/
+topic_modeling/textos_individuales/
+topic_modeling/textos_ids/
