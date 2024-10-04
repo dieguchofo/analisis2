@@ -55,51 +55,59 @@ promedios2[1:4, 1] <- c("06", "07", "08", "09")
 
 # HACERLA EN LÍNEA
 
-ggplot(data = promedios2, aes(x = año, y = longitud_promedio, group = 1)) +
-    geom_line()
-    ggsave(
-        filename = "graficas/longitudes/longitudes_promedio_menores_400000.png",
-        width = 5,
-        height = 3
-    )
+# ggplot(data = promedios2, aes(x = año, y = longitud_promedio, group = 1)) +
+#     geom_line()
+#     ggsave(
+#         filename = "graficas/longitudes/longitudes_promedio_menores_400000.png",
+#         width = 5,
+#         height = 3
+#     )
+# 
+# # gráfica de puntos de todas las longitudes de todos los trabajos
+# p <- ggplot(data = l_y_a4, aes(año, longitud)) +
+#         geom_point(size = 0.25, alpha = 0.25)
+#         ggsave(
+#             filename = "graficas/longitudes/longitudes_absolutas.png",
+#             plot = p,
+#             width = 5,
+#             height = 5
+#         )
+# 
+# p2 <- ggplot(data = l_y_a5, aes(año, longitud)) +
+#         geom_point(size = 0.25, alpha = 0.25)
+#         ggsave(
+#             filename = "graficas/longitudes/longitudes_absolutas_menores_400000.png",
+#             plot = p2,
+#             width = 5,
+#             height = 5
+#         )
+# 
+# # gráfica con puntos absolutos y línea de promedio
+# p3 <- ggplot() +
+#     geom_line(data = promedios, aes(año, longitud_promedio, group = 1)) +
+#     geom_point(data = l_y_a4, aes(año, longitud), size = 0.25, alpha = 0.25)
+#             ggsave(
+#             filename = "graficas/longitudes/longitudes_absolutas_y_promedio.png",
+#             plot = p3,
+#             width = 5,
+#             height = 5
+#         )
+# 
+# # sin < 400000
+# p3 <- ggplot() +
+#     geom_line(data = promedios, aes(año, longitud_promedio, group = 1)) +
+#     geom_point(data = l_y_a5, aes(año, longitud), size = 0.25, alpha = 0.25)
+#             ggsave(
+#             filename = "graficas/longitudes/longitudes_absolutas_y_promedio_menores_400000.png",
+#             plot = p3,
+#             width = 5,
+#             height = 5
+#         )
+# 
+# smooth
+png("longitudes/smooth.png")
+scatter.smooth(promedios2, type = "l", col = "#ADADAD", xaxt = "n", main = "estilo", xlab = "", ylab = "")
+axis(1, at = 1:18, labels = 2006:2023)
+dev.off()
 
-# gráfica de puntos de todas las longitudes de todos los trabajos
-p <- ggplot(data = l_y_a4, aes(año, longitud)) +
-        geom_point(size = 0.25, alpha = 0.25)
-        ggsave(
-            filename = "graficas/longitudes/longitudes_absolutas.png",
-            plot = p,
-            width = 5,
-            height = 5
-        )
-
-p2 <- ggplot(data = l_y_a5, aes(año, longitud)) +
-        geom_point(size = 0.25, alpha = 0.25)
-        ggsave(
-            filename = "graficas/longitudes/longitudes_absolutas_menores_400000.png",
-            plot = p2,
-            width = 5,
-            height = 5
-        )
-
-# gráfica con puntos absolutos y línea de promedio
-p3 <- ggplot() +
-    geom_line(data = promedios, aes(año, longitud_promedio, group = 1)) +
-    geom_point(data = l_y_a4, aes(año, longitud), size = 0.25, alpha = 0.25)
-            ggsave(
-            filename = "graficas/longitudes/longitudes_absolutas_y_promedio.png",
-            plot = p3,
-            width = 5,
-            height = 5
-        )
-
-# sin < 400000
-p3 <- ggplot() +
-    geom_line(data = promedios, aes(año, longitud_promedio, group = 1)) +
-    geom_point(data = l_y_a5, aes(año, longitud), size = 0.25, alpha = 0.25)
-            ggsave(
-            filename = "graficas/longitudes/longitudes_absolutas_y_promedio_menores_400000.png",
-            plot = p3,
-            width = 5,
-            height = 5
-        )
+plot(promedios2)

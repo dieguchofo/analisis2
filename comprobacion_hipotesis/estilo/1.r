@@ -41,7 +41,7 @@ ids <- substr(ids2, 1, nchar(ids2) - 1) # borrar información innecesaria
 # obtener las frecuencias relativas
 raw <- read.csv2("comprobacion_hipotesis/estilo/table_with_frequencies.txt")
 
-datos <- strsplit(raw[1:5000, 1], " ")          # hacer una lista en la que cada elemento es un vector con la información
+datos <- strsplit(as.character(raw[1:5000, 1]), " ")          # hacer una lista en la que cada elemento es un vector con la información
                                                 # de cada línea del .txt (una línea es una palabra y sus frecuencias)
 datos_df1 <- data.frame(datos)                  # hacerlo data frame
 colnames(datos_df1) <- datos_df1[1, ]           # hacer los nombres de las columnas las palabras (para que las columnas se llamen "de", "la", etc.)

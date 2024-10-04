@@ -3,6 +3,9 @@
 # promediarlas y graficarlas. Si mi hipótesis es correcta, deberían aumentar
 # las distancias. Lo voy a hacer con 50 topics, a ver qué sale.
 
+# EN MI LAPTOP ESTO NO FUNCIONA. POR ALGUNA RAZÓN, AS.NUMERIC CAMBIA
+# DRÁSTICAMENTE LOS VALORES
+
 ### HACER DATA FRAME DE LOS DATOS ###
 raw <- read.csv2("comprobacion_hipotesis/tema/50-doc-topics.csv", header = FALSE, sep = ",")
 
@@ -95,3 +98,5 @@ png("comprobacion_hipotesis/tema/tema.png")
 plot(juntos, type = "l", xaxt = "n", main = "tema", xlab = "", ylab = "")
 axis(1, at = 1:18, labels = 2006:2023)
 dev.off()
+
+which(juntos == NA)
